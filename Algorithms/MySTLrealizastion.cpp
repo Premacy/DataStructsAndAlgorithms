@@ -36,3 +36,16 @@ It find_if_not(It first, It last, U p) {
 
   return result;
 }
+
+template<class InputIterator, class ValueType> std::size_t count(InputIterator begin, InputIterator end, const ValueType &val){
+	InputIterator itr = begin;
+	std::size_t count{0};
+
+	while(itr != end){
+		if( (*itr) == val ){
+			++count;
+		}
+	}
+	
+	return count;
+}
